@@ -1,5 +1,4 @@
-import logo from "./logo.svg";
-import "./App.css";
+import logo from "./assets/logo.svg";
 import "./styles/common.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Players from "./views/Players/Players";
@@ -14,7 +13,9 @@ function App() {
         <Link to="/">Inicio</Link>
         <Link to="/players">Jugadores</Link>
         <Link to="/scoreboard">Puntajes por equipo</Link>
-        <Link to="/start-new-game">Empezá un nuevo juego (no se guardará tu puntaje)</Link>
+        <Link to="/start-new-game">
+          Empezá un nuevo juego (no se guardará tu puntaje)
+        </Link>
 
         <Switch>
           <Route exact path="/">
