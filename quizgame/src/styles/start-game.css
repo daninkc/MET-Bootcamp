@@ -1,0 +1,32 @@
+.start-game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+}
+
+.question {
+  font-weight: 400;
+  text-align: center;
+}
+
+.button-answer,
+.button-next {
+  margin: 5px 10px;
+  padding: 10px 15px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  background-color: #e55a60;
+  color: white;
+}
+
+.container-question {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button-answer:hover {
+  background-color: #2399a6;
+}

@@ -1,0 +1,72 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navbar {
+  background-color: #2f2e41;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid #e55a60;
+}
+
+.link {
+  text-decoration: none;
+  color: #e4e4e4;
+  font-weight: 600;
+  padding: 14px 20px;
+}
+
+.link:hover {
+  background-color: #e55a60;
+}
+
+.container {
+  text-align: center;
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-quiz {
+  display: flex;
+}
+
+.quiz {
+  color: #e55a60;
+  font-size: 48px;
+  font-weight: 600;
+  margin: 0 0 30px;
+}
+
+.button-container {
+  display: inline;
+}
+
+.button-home {
+  margin: 0 20px;
+  padding: 10px 15px;
+  font-size: 18px;
+  border: none;
+  background-color: #e55a60;
+  color: white;
+  border-radius: 5px;
+}
+
+.button-home:hover {
+  background-color: #198591;
+}
+
+.container-inline {
+  display: flex;
+  flex-direction: row;
+}
