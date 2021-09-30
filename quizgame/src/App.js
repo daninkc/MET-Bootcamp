@@ -16,9 +16,6 @@ function App() {
           <Link className="link" to="/">
             Inicio
           </Link>
-          <Link className="link" to="/start-new-game">
-            Empezar nuevo juego
-          </Link>
           <Link className="link" to="/players">
             Jugadores
           </Link>
@@ -45,9 +42,6 @@ function App() {
           </Route>
           <Route path="/players">
             <Players />
-          </Route>
-          <Route exact path="/start-new-game">
-            <StartGame />
           </Route>
           <Route path="/scoreboard">
             <Scoreboard />

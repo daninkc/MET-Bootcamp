@@ -21,6 +21,13 @@
   color: white;
 }
 
+.button-answer:disabled {
+  background-color: grey;
+}
+.button-answer:disabled:hover {
+  background-color: grey;
+}
+
 .container-question {
   display: flex;
   flex-direction: column;

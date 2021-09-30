@@ -21,13 +21,11 @@ const StartGame = () => {
     const beQuestion = await get(
       `https://6141ec414d16670017ba2a7b.mockapi.io/api/v1/questions?id=${questionIndex}`
     )
-    console.log('BE question:', beQuestion)
     if (beQuestion && beQuestion.length > 0) {
       setLoaded(true)
       setQuestion(beQuestion)
       setQuestionIndex(questionIndex + 1)
     } else {
-      console.log('No answer!')
       const updatedScore = await updateScore(currentScore, id)
       setLoaded(true)
       setFinalScore(updatedScore)
@@ -49,7 +47,7 @@ const StartGame = () => {
   }
 
   const AnswerList = (props) => {
-    const { answerList } = props
+    const { answerList, answerWasClicked } = props
     const right = answerList.rightAnswer
     const { answerA, answerB, answerC } = answerList.wrongAnswers[0]
     const answers = [
@@ -72,8 +70,9 @@ const StartGame = () => {
       },
     ]
     const shuffledArr = shuffleArray(answers)
-    return (
-      <div className="button-container">
+    if (!answerWasClicked) {
+      return (
+      <div className="answer-container">
         {shuffledArr.length > 0 &&
           shuffledArr.map((item, key) => {
             return (
@@ -89,6 +88,9 @@ const StartGame = () => {
           })}
       </div>
     )
+  } else {
+    return null
+  } 
   }
 
   function nextQuestion(questionIndex) {
@@ -125,6 +127,7 @@ const StartGame = () => {
             answerList={question[0]}
           />
           <AnswerMessage
+            correct={question[0].rightAnswer}
             answerWasClicked={answerWasClicked}
             correctAnswerClicked={correctAnswerClicked}
           />

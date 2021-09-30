@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import Error from '../../components/Error'
 import Loader from '../../components/Loader'
 import post from '../../helpers/post'
+import translate from '../../helpers/translateTeamNames'
 
 const FirstTimePlayer = () => {
   const [name, setName] = useState('')
@@ -46,7 +47,7 @@ const FirstTimePlayer = () => {
       <div className="first-time-container">
         <h4 className="welcome">
           Elige un equipo:
-          {team.length > 0 && <span>{team}</span>}
+          {team.length > 0 && <span> {translate(team)}</span>}
         </h4>
         <div className="button-container">
           <button className="button-team-red" onClick={() => setTeam('red')}>

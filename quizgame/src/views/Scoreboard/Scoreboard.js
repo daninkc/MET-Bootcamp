@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import Loader from '../../components/Loader'
 import get from '../../helpers/get'
+import translate from '../../helpers/translateTeamNames'
 
 const Scoreboard = () => {
   const [teamScores, setTeamScores] = useState([])
@@ -69,7 +70,7 @@ const Scoreboard = () => {
           return (
             <div className="container-inline">
               <h2 key={key} className="question">
-                Equipo {item.team}:
+                Equipo {translate(item.team)}:
               </h2>
               <h2 style={{ color: item.team, marginLeft: 4 }}>
                 {item.score} puntos

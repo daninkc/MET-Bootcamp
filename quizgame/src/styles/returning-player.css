@@ -1,0 +1,14 @@
+.select-name {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.player-name-button {
+    border-radius: 5px;
+    box-shadow: none;
+    background-color: rgb(35, 153, 166);
+    color: white;
+    font-weight: bold;
+    padding: 5px 0px;
+    margin-bottom: 4px;
+}
