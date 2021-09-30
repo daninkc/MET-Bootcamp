@@ -1,10 +1,8 @@
 import { useState, useEffect } from 'react'
-import { useRouteMatch, Switch, Route } from 'react-router'
 import get from '../../helpers/get'
 import Loader from '../../components/Loader'
 
 const Players = () => {
-  const match = useRouteMatch()
   const [players, setPlayers] = useState({})
   const [loaded, setLoaded] = useState(false)
 
@@ -37,8 +35,6 @@ const Players = () => {
 
   return (
     <div>
-      <Switch>
-        <Route path={match.path}>
           <div className="container-players">
             <h3 className="players-1">Nombre</h3>
             <h3 className="players-2">Equipo</h3>
@@ -56,8 +52,6 @@ const Players = () => {
                 )
               })}
           </div>
-        </Route>
-      </Switch>
     </div>
   )
 }
