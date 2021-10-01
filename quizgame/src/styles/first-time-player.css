@@ -1,6 +1,5 @@
 .first-time-container {
   margin-top: 40px;
-  font-size: 18px;
 }
 
 .welcome {
@@ -15,12 +14,11 @@
   border: 1px solid #707070;
   border-radius: 5px;
   margin-left: 10px;
-  font-size: 18px;
   padding-left: 10px;
 }
 
 .button-container {
-  display: inline
+  display: inline;
 }
 
 .button-team-red,
@@ -29,7 +27,6 @@
 .button-register {
   margin: 0 10px;
   padding: 10px 15px;
-  font-size: 18px;
   border: none;
   border-radius: 5px;
   color: white;
@@ -72,9 +69,13 @@
 }
 
 .start-play {
-  font-size: 18px;
   display: flex;
   justify-content: center;
   margin-top: 30px;
   color: black;
+}
+
+.error {
+  display: inline-flex;
+  width: 250px;
 }

@@ -28,12 +28,12 @@ function App() {
             <div className="container">
               <img alt="Quiz logo" height="350px" src={logo} />
               <div className="title-quiz">
-                <h1 className="quiz">QUIZGA</h1>
-                <h1 className="quiz">M</h1>
-                <h1 className="quiz" style={{ color: '#F6BF5E' }}>
+                <h1 className="quiz font-large">QUIZGA</h1>
+                <h1 className="quiz font-large">M</h1>
+                <h1 className="quiz font-large" style={{ color: '#F6BF5E' }}>
                   E
                 </h1>
-                <h1 className="quiz" style={{ color: '#2399A6' }}>
+                <h1 className="quiz font-large" style={{ color: '#2399A6' }}>
                   T
                 </h1>
               </div>

@@ -63,7 +63,9 @@ const Scoreboard = () => {
 
   return (
     <div className="container">
-      <h1 className="title">PUNTAJE TOTAL</h1>
+      <h1 className="quiz" style={{ marginTop: 30 }}>
+        PUNTAJE TOTAL
+      </h1>
       {!loaded && <Loader />}
       {teamScores &&
         teamScores.map((item, key) => {

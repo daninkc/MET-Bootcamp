@@ -72,25 +72,25 @@ const StartGame = () => {
     const shuffledArr = shuffleArray(answers)
     if (!answerWasClicked) {
       return (
-      <div className="answer-container">
-        {shuffledArr.length > 0 &&
-          shuffledArr.map((item, key) => {
-            return (
-              <button
-                className="button-answer"
-                disabled={answerWasClicked}
-                onClick={() => checkCorrectAnswer(item)}
-                key={key}
-              >
-                {item.answer}
-              </button>
-            )
-          })}
-      </div>
-    )
-  } else {
-    return null
-  } 
+        <div className="app">
+          {shuffledArr.length > 0 &&
+            shuffledArr.map((item, key) => {
+              return (
+                <button
+                  className="button-answer font-regular"
+                  disabled={answerWasClicked}
+                  onClick={() => checkCorrectAnswer(item)}
+                  key={key}
+                >
+                  {item.answer}
+                </button>
+              )
+            })}
+        </div>
+      )
+    } else {
+      return null
+    }
   }
 
   function nextQuestion(questionIndex) {
@@ -101,18 +101,18 @@ const StartGame = () => {
   }
 
   return (
-    <div className="start-game-container">
+    <div className="start-game container">
       <div className="container">
-        <h1 className="quiz" style={{ margin: 0 }}>
+        <h1 className="quiz font-large" style={{ margin: 0 }}>
           START
         </h1>
         <div className="title-quiz">
-          <h1 className="quiz">QUIZGA</h1>
-          <h1 className="quiz">M</h1>
-          <h1 className="quiz" style={{ color: '#F6BF5E' }}>
+          <h1 className="quiz font-large">QUIZGA</h1>
+          <h1 className="quiz font-large">M</h1>
+          <h1 className="quiz font-large" style={{ color: '#F6BF5E' }}>
             E
           </h1>
-          <h1 className="quiz" style={{ color: '#2399A6' }}>
+          <h1 className="quiz font-large" style={{ color: '#2399A6' }}>
             T
           </h1>
         </div>
@@ -132,8 +132,7 @@ const StartGame = () => {
             correctAnswerClicked={correctAnswerClicked}
           />
           <button
-            className="button-register"
-            style={{ width: '50%' }}
+            className="button-register font-regular"
             onClick={() => nextQuestion(questionIndex)}
           >
             Siguiente pregunta

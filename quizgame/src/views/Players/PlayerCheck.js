@@ -18,13 +18,14 @@ const PlayerCheck = () => {
   return (
     <div className="button-container">
       <button
-        className="button-home"
+        className="button-home font-regular"
         onClick={() => setPlayerType('firstTimer')}
       >
         Primera vez
       </button>
       <button
-        className="button-home"
+        className="button-home font-regular"
+        style={{ margin: 0 }}
         onClick={() => setPlayerType('returning')}
       >
         Jugar de nuevo

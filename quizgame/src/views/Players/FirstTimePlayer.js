@@ -45,21 +45,27 @@ const FirstTimePlayer = () => {
   const TeamPicker = () => {
     return (
       <div className="first-time-container">
-        <h4 className="welcome">
+        <h4 className="welcome font-regular">
           Elige un equipo:
           {team.length > 0 && <span> {translate(team)}</span>}
         </h4>
         <div className="button-container">
-          <button className="button-team-red" onClick={() => setTeam('red')}>
+          <button
+            className="button-team-red font-regular"
+            onClick={() => setTeam('red')}
+          >
             Rojo
           </button>
           <button
-            className="button-team-green"
+            className="button-team-green font-regular"
             onClick={() => setTeam('green')}
           >
             Verde
           </button>
-          <button className="button-team-blue" onClick={() => setTeam('blue')}>
+          <button
+            className="button-team-blue font-regular"
+            onClick={() => setTeam('blue')}
+          >
             Azul
           </button>
         </div>
@@ -71,23 +77,31 @@ const FirstTimePlayer = () => {
     <div>
       {!success && (
         <div className="first-time-container">
-          <h4 className="welcome">Bienvenid@!!</h4>
+          <h4 className="welcome font-regular">Bienvenid@!!</h4>
           <input
             type="text"
-            className="input-name"
+            className="input-name font-regular"
             placeholder="Tu nombre"
             onChange={(e) => setName(e.target.value)}
           ></input>
           <TeamPicker />
-          <button className="button-register" onClick={() => registerPlayer()}>
+          <button
+            className="button-register font-regular"
+            onClick={() => registerPlayer()}
+          >
             Registrarme
           </button>
-          <Error message={error} />
+          <div className="error">
+            <Error message={error} />
+          </div>
         </div>
       )}
       {!loaded && <Loader />}
       {success && (
-        <Link className="start-play" to={`/start-new-game/${newPlayerId}`}>
+        <Link
+          className="start-play font-regular"
+          to={`/start-new-game/${newPlayerId}`}
+        >
           Click para empezar a jugar!!
         </Link>
       )}

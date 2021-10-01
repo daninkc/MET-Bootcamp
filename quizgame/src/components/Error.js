@@ -1,6 +1,4 @@
 const Error = (props) => {
-    return (
-        <span style={{color: 'red', marginBottom: '20px'}}>{props?.message}</span>
-    )
+  return <span style={{ color: 'red' }}>{props?.message}</span>
 }
 export default Error

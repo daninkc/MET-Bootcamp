@@ -28,28 +28,19 @@
   background-color: #e55a60;
 }
 
-.container {
-  text-align: center;
-  padding-top: 80px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 .title-quiz {
   display: flex;
 }
 
 .quiz {
   color: #e55a60;
-  font-size: 48px;
   font-weight: 600;
   margin: 0 0 30px;
 }
 
 .button-container {
   display: inline;
+  text-align: center;
 }
 
 .answer-container {
@@ -60,7 +51,6 @@
 .button-home {
   margin: 0 20px;
   padding: 10px 15px;
-  font-size: 18px;
   border: none;
   background-color: #e55a60;
   color: white;
